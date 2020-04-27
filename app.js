@@ -108,10 +108,10 @@ function loadNews() {
 
 // Callback func которая принимает ответ от сервера и ошибку
 function onGetResponse(err, response) {
-  if (err) {
-    alert(`${err}`);
-    return;
-  }
+  // if (err) {
+  //   alert(`${err}`);
+  //   return;
+  // }
   renderNews(response.articles);
 }
 
