@@ -56,7 +56,7 @@ const http = customHttp();
 
 const newsServices = (function() {
   const apiKey = "9394726d5f134232b470fa4b59acfd91";
-  const apiUrl = "http://newsapi.org/v2";
+  const apiUrl = "https://newsapi.org/v2";
 
   return {
     topHeadlines(country = "ua", category = "technology", cb) {
@@ -112,6 +112,7 @@ function onGetResponse(err, response) {
     alert(`${err}`);
     return;
   }
+  console.log(response);
   renderNews(response.articles);
 }
 
