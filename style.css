@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  padding: 20px;
+  background-color: rgb(13, 188, 188);
+}
+.header .header_title .header_link {
+  color: white;
+}
+.news_form {
+  width: 50%;
+  box-shadow: 4px 5px 8px 2px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+}
+.news_form-title {
+  color: rgb(154, 151, 151);
+  font-weight: 100;
+}
+.news_form_item {
+  color: rgb(154, 151, 151);
+  font-size: 14px;
+}
+
+.news_form-select,
+.news_form-select-category {
+  border: none;
+  border-bottom: 1px solid silver;
+}
+.news_form-select-category {
+  margin-top: 10px;
+}
+
+.news_form-search {
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 1px solid silver;
+  padding: 10px 17px;
+  font-size: 20px;
+  margin-top: 10px;
+  outline: none;
+  transition: 0.6s all;
+}
+.news_form-search:focus {
+  background-color: silver;
+  color: white;
+  transition: 0.6s all;
+}
+.news_form-button {
+  padding: 10px 17px;
+  background-color: rgb(28, 28, 202);
+  color: white;
+  margin-top: 40px;
+  transition: 0.6s all;
+}
+.news_form-button:hover {
+  background-color: rgb(75, 75, 180);
+  transition: 0.6s all;
+}
+.news_form-button i {
+  margin-left: 10px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.card {
+  margin-top: 20px;
+  flex-basis: 40%;
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .card {
+    margin-top: 20px;
+    flex-basis: 45%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .header .header_title .header_link {
+    font-size: 20px;
+  }
+
+  .news_form {
+    width: 60%;
+  }
+  .news_form-title {
+    font-size: 20px;
+  }
+  .news_form_item {
+    font-size: 11px;
+  }
+  .news_form-select,
+  .news_form-select-category {
+    font-size: 15px;
+  }
+  .news_form-search {
+    font-size: 15px;
+  }
+  .news_form-button {
+    font-size: 15px;
+  }
+
+  .card {
+    margin-top: 20px;
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+  .header .header_title .header_link {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .news_form-title {
+    font-size: 15px;
+  }
+  .news_form_item {
+    font-size: 9px;
+  }
+  .news_form-select,
+  .news_form-select-category {
+    font-size: 12px;
+  }
+  .news_form-search {
+    font-size: 12px;
+  }
+  .news_form-button {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .news_form {
+    width: 90%;
+  }
+  .card {
+    margin-top: 20px;
+    flex-basis: 90%;
+  }
+  .card-title {
+    font-size: 13px;
+  }
+  .card-text {
+    font-size: 11px;
+	}
+	.btn {
+		font-size: 13px;
+	}
+}

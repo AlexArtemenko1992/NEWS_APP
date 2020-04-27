@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>App news</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/5615e0f847.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="header">
+      <h3 class="header_title">
+        <a href="#" class="header_link">News App</a>
+      </h3>
+    </header>
+    <main>
+      <form class="news_form">
+        <h2 class="news_form-title">Search news</h2>
+        <label class="news_form_item">Chenge your country</label>
+        <select class="custom-select custom-select-lg news_form-select">
+          <option value="ua">Ukraine</option>
+          <option value="ru">Russia</option>
+          <option value="us">USA</option>
+        </select>
+        <select class="custom-select custom-select-lg news_form-select-category">
+          <option value="general">General</option>
+          <option value="sports">Sports</option>
+          <option value="technology">Technology</option>
+          <option value="health">Health</option>
+        </select>
+        <input type="text" class="news_form-search " placeholder="Search" />
+        <button class="news_form-button">SEARCH<i class="fas fa-search"></i></button>
+      </form>
+
+      <div class="container"></div>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
