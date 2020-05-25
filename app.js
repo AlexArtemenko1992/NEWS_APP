@@ -49,25 +49,25 @@ function customHttp() {
       } catch (error) {
         cb(error);
       }
-    }
+    },
   };
 }
 const http = customHttp();
 
-const newsServices = (function() {
+const newsServices = (function () {
   const apiKey = "9394726d5f134232b470fa4b59acfd91";
-  const apiUrl = "https://newsapi.org/v2";
+  const apiUrl = "https://news-api-v2.herokuapp.com";
 
   return {
     topHeadlines(country = "ua", category = "technology", cb) {
       http.getRequest(
         `${apiUrl}/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}`,
-        cb
+        cb,
       );
     },
     everything(query, cb) {
       http.getRequest(`${apiUrl}/everything?q=${query}&apiKey=${apiKey}`, cb);
-    }
+    },
   };
 })();
 
@@ -88,7 +88,7 @@ form.addEventListener("submit", (e) => {
 
 // Loader, который запускает функцию после загрузки DOM
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   loadNews();
 });
 
@@ -134,8 +134,9 @@ function renderNews(news) {
 function newsTemplate(news) {
   return `
 		<div class='card'">
-			<img src="${news.urlToImage ||
-        "https://s.hi-news.ru/wp-content/uploads/2019/10/14future08-750x509.jpg"}" class="card-img-top" alt="image">
+			<img src="${
+        news.urlToImage || "https://s.hi-news.ru/wp-content/uploads/2019/10/14future08-750x509.jpg"
+      }" class="card-img-top" alt="image">
 			<div class='card-body'>
 				<h5 class='card-title'>${news.title || ""}</h5>
 				<p class='card-text'>${news.description || ""}</p>
